@@ -2,12 +2,14 @@ import requests
 
 #api.nasa.gov
 
-url_nasa="https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=DEMO_KEY"
+def retorna_fotos(): 
 
-response_nasa = requests.request("GET", url=url_nasa)
+    url_nasa="https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=DEMO_KEY"
 
-photos = response_nasa.json()
+    response_nasa = requests.request("GET", url=url_nasa)
 
-img = photos["photos"][0]["img_src"]
+    photos = response_nasa.json()
 
-print(img)
+    img = photos["photos"][0]["img_src"]
+
+    return img 

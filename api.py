@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from datetime import datetime
+from request import retorna_fotos
 
 app = FastAPI()
 
@@ -15,3 +16,8 @@ async def data():
 @app.get("/nome/{nome}")
 async def nome(nome: str):
     return {"message": f"Hello {nome}"}
+
+@app.get("/fotos")
+async def fotos():
+    fotos_nasa = retorna_fotos()
+    return {"message": fotos_nasa}
