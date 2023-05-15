@@ -1,0 +1,6 @@
+Ferramentas utilizadas:
+
+fastapi,
+pandas,
+black
+venv
