@@ -3,4 +3,6 @@ Ferramentas utilizadas:
 fastapi,
 pandas,
 black
-venv
+venv (ambiente virtual)
+uvicorn (rodar servidor, ex: uvicorn app:app --reload)
+
